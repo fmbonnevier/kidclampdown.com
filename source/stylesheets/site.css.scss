@@ -66,11 +66,11 @@ body {
 
   .nav__list {
     padding: 0;
-    margin: ($spacing-unit * 2) 0 0 $spacing-unit * 3;
+    margin: $spacing-unit 0 0 $spacing-unit * 2;
     text-decoration: none;
 
     @include respond-to($mid) {
-      margin: ($spacing-unit * 2) 0 0 $spacing-unit * 3;
+      margin: $spacing-unit 0 0 $spacing-unit * 3;
     }
   }
     .nav__list-item {
@@ -90,16 +90,21 @@ body {
         font-family: $font-family;
         font-size: $font-size;
 
+        &:before {
+          content: '';
+          height: 1px;
+          background-color: $link-hover-color;
+          width: 0;
+          position: absolute;
+          bottom: -3px;
+          transition: width ease-in-out 200ms;
+        }
+
         &:hover,
         &:active,
         &:focus {
           &:before {
-            content: '';
-            height: 1px;
-            background-color: $link-hover-color;
             width: 100%;
-            position: absolute;
-            bottom: -3px;
           }
         }
       }
