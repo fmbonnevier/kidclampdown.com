@@ -47,8 +47,3 @@ page '/*.txt', layout: false
 #
 # External Pipeline
 
-activate :external_pipeline,
-  :name => 'broccoli',
-  :command => (build? ? 'broccoli build pipeline-build' : 'broccoli-timepiece pipeline-build'),
-  :source => 'pipeline-build',
-  :latency => 2
