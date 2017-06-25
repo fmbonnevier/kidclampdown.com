@@ -92,17 +92,15 @@ body {
 
         &:after {
           content: '';
-          width: 0;
-          transition: width ease-in-out 300ms;
         }
 
         &:hover {
           &:after {
+            content: '';
             position: absolute;
-            width: 100%;
             right: 0;
             bottom: -3px;
-            left: 0px;
+            left: 0;
             height: 1px;
             background-color: $link-hover-color;
           }
