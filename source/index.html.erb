@@ -2,20 +2,24 @@
 title: kidclampdown
 ---
 
-<header>
-  <picture class="hero">
-   <source srcset="images/juan_big.jpg" media="(min-width: 650px)">
-   <img class="hero__image" src="images/juan_small.jpg" alt="juan_2017">
-  </picture>
-</header>
-
+<a href="egg.html">
+  <header>
+      <picture class="hero">
+        <source srcset="images/juan_big.jpg" media="(min-width: 650px)">
+        <img class="hero__image" src="images/juan_small.jpg" alt="juan_2017">
+      </picture>
+  </header>
+</a>
 
 <nav class="nav">
   <ol class="nav__list">
-    <li class="nav__list-item"> <%= link_to( "contact", "#", html_options = {class: "nav__link"} )%> </li>
-    <li class="nav__list-item"> <%= link_to( "book", "#", html_options = {class: "nav__link"}  )%> </li>
-    <li class="nav__list-item"> <%= link_to( "instagram", "#", html_options = {class: "nav__link"}  )%> </li>
-    <li class="nav__list-item"> <%= link_to( "upcoming", "#", html_options = {class: "nav__link"} )%> </li>
+    <li class="nav__list-item"> <%= link_to( "contact", "mailto:kidclampdown@gmail.com", html_options = {class: "nav__link"} )%> </li>
+    <li class="nav__list-item"> <%= link_to( "book", "http://www.fantagraphics.com/mountebank/", html_options = {class: "nav__link"}  )%> </li>
+    <li class="nav__list-item"> <%= link_to( "instagram", "https://www.instagram.com/kidclampdown/", html_options = {class: "nav__link"}  )%> </li>
+    <li class="nav__list-item"> <%= link_to( "upcoming", "https://fantagraphics.com/flog/nowpressrelease/", html_options = {class: "nav__link"} )%> </li>
   </ol>
 </nav>
+
+
+
 

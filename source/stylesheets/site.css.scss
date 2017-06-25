@@ -3,7 +3,6 @@ $black: #000000;
 $pink: #ff69b4;
 $green: #99d4b8;
 
-
 /* Breakpoints */
 $mid: 650px;
 
@@ -27,13 +26,11 @@ body {
 }
 
 /* Helpers */
-
 @mixin respond-to($breakpoint) {
     @media screen and (min-width: $breakpoint), print {
         @content;
     }
 }
-
 
 /* Hero - Component */
 
@@ -50,12 +47,26 @@ body {
     }
   }
 
+
+/* Egg - Component */
+.egg {
+  position: relative;
+}
+
+  .egg__image {
+    position: absolute;
+    margin-right: -50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: calc(100vw / 2);
+  }
+
 /* Nav - Component */
 .nav {}
 
   .nav__list {
     padding: 0;
-    margin: ($spacing-unit * 4) 0 0 $spacing-unit * 3;
+    margin: ($spacing-unit * 2) 0 0 $spacing-unit * 3;
     text-decoration: none;
 
     @include respond-to($mid) {
@@ -63,8 +74,8 @@ body {
     }
   }
     .nav__list-item {
-      padding-top: $spacing-unit / 2;
-      padding-bottom: $spacing-unit / 2;
+      padding-top: $spacing-unit;
+      padding-bottom: $spacing-unit;
 
       &:first-child {
         padding-top: 0;
