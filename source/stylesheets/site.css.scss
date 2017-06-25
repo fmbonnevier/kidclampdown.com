@@ -90,9 +90,12 @@ body {
         font-family: $font-family;
         font-size: $font-size;
 
+        &:after {
+          content: '';
+        }
+
         &:hover {
           &:after {
-            content: '';
             position: absolute;
             right: 0;
             bottom: -3px;
