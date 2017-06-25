@@ -90,20 +90,17 @@ body {
         font-family: $font-family;
         font-size: $font-size;
 
-        &:before {
-          content: '';
-          height: 1px;
-          background-color: $link-hover-color;
-          width: 0;
-          position: absolute;
-          bottom: -3px;
-          transition: width ease-in-out 200ms;
-        }
-
         &:hover {
-          &:before {
-            width: 100%;
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            left: 0;
+            height: 1px;
+            background-color: $link-hover-color;
           }
         }
       }
+
 
