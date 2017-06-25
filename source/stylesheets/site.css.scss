@@ -1,24 +1,95 @@
+/* Colors */
+$black: #000000;
+$pink: #ff69b4;
+$green: #99d4b8;
+
+
+/* Breakpoints */
+$mid: 650px;
+
+/* Visual Pacing */
+$spacing-unit: 16px;
+
+/* Site Defaults */
+$site-background: $black;
+
+/* Font */
+$font-color: $pink;
+$font-family: 'Courier New';
+$font-size: 1em;
+
+/* Links */
+$link-hover-color: $green;
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  background-color: $site-background;
+  margin: 0;
 }
 
-a {
-  color: rgba(#000, 0.7);
+/* Helpers */
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+@mixin respond-to($breakpoint) {
+    @media screen and (min-width: $breakpoint), print {
+        @content;
+    }
+}
+
+
+/* Hero - Component */
+
+.hero {}
+
+  .hero__image {
+    width: 100vw;
+    max-height: 60vh;
+    min-height: 400px;
+
+    @include respond-to($mid) {
+      max-height: 70vh;
+      min-height: 500px;
+    }
   }
-}
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
-}
+/* Nav - Component */
+.nav {}
+
+  .nav__list {
+    padding: 0;
+    margin: ($spacing-unit * 4) 0 0 $spacing-unit * 3;
+    text-decoration: none;
+
+    @include respond-to($mid) {
+      margin: ($spacing-unit * 2) 0 0 $spacing-unit * 3;
+    }
+  }
+    .nav__list-item {
+      padding-top: $spacing-unit / 2;
+      padding-bottom: $spacing-unit / 2;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+    }
+
+      .nav__link {
+        position: relative;
+        text-decoration: none;
+        color: $font-color;
+        font-family: $font-family;
+        font-size: $font-size;
+
+        &:hover,
+        &:active,
+        &:focus {
+          &:before {
+            content: '';
+            height: 1px;
+            background-color: $link-hover-color;
+            width: 100%;
+            position: absolute;
+            bottom: -3px;
+          }
+        }
+      }
+
