@@ -45,13 +45,6 @@ body {
 
   .hero__image {
     width: 100%;
-    // max-height: 60vh;
-    // min-height: 400px;
-
-    @include respond-to($mid) {
-      // max-height: 70vh;
-      // min-height: 500px;
-    }
   }
 
 
