@@ -23,6 +23,13 @@ $link-hover-color: $green;
 body {
   background-color: $site-background;
   margin: 0;
+  animation: fadein 300ms;
+}
+
+/* Animations */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Helpers */
@@ -37,13 +44,13 @@ body {
 .hero {}
 
   .hero__image {
-    width: 100vw;
-    max-height: 60vh;
-    min-height: 400px;
+    width: 100%;
+    // max-height: 60vh;
+    // min-height: 400px;
 
     @include respond-to($mid) {
-      max-height: 70vh;
-      min-height: 500px;
+      // max-height: 70vh;
+      // min-height: 500px;
     }
   }
 

@@ -5,8 +5,9 @@ title: kidclampdown
 <a href="egg.html">
   <header>
       <picture class="hero">
-        <source srcset="images/juan_big.jpg" media="(min-width: 650px)">
-        <img class="hero__image" src="images/juan_small.jpg" alt="juan_2017">
+        <source srcset="images/juan_small.jpg" media="(max-width: 30em)">
+        <source srcset="images/juan_medium.jpg" media="(max-width: 60em)">
+        <img class="hero__image" src="images/juan_big.jpg" alt="juan_2017">
       </picture>
   </header>
 </a>
@@ -16,7 +17,7 @@ title: kidclampdown
     <li class="nav__list-item"> <%= link_to( "contact", "mailto:kidclampdown@gmail.com", html_options = {class: "nav__link"} )%> </li>
     <li class="nav__list-item"> <%= link_to( "book", "http://www.fantagraphics.com/mountebank/", html_options = {class: "nav__link"}  )%> </li>
     <li class="nav__list-item"> <%= link_to( "instagram", "https://www.instagram.com/kidclampdown/", html_options = {class: "nav__link"}  )%> </li>
-    <li class="nav__list-item"> <%= link_to( "upcoming", "https://fantagraphics.com/flog/nowpressrelease/", html_options = {class: "nav__link"} )%> </li>
+    <li class="nav__list-item"> <%= link_to( "upcoming", "http://www.fantagraphics.com/now1/#/product/2791", html_options = {class: "nav__link"} )%> </li>
   </ol>
 </nav>
 
